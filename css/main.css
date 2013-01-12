@@ -1,0 +1,358 @@
+/* BEGIN RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+ul li a {
+    display:block;
+}
+
+ul li a:link,
+ul li a:visited,
+ul li a:active {
+    color:#fff;
+}
+
+ul li a:hover {
+    color:#000;
+    background:#888;
+    margin:-5px;
+    padding:5px;
+}
+
+ul li.current a:link,
+ul li.current a:visited,
+ul li.current a:hover,
+ul li.current a:active {
+    color:#000;
+}
+/* END RESET */
+
+/* BEGIN JDPlayer */
+body {
+    margin:20px auto;
+    width:300px;
+    padding:0;
+    font-family: "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    overflow:hidden;
+}
+
+body {
+    background:#000;
+    color:#fff;
+}
+
+.player {
+    display:block;
+    width:298px;
+    height:200px;
+    margin:0;
+    padding:0;
+    border:1px solid #818181;
+    position:relative;
+    opacity:0.95;
+    filter:alpha(opacity=95); /* For IE8 and earlier */
+}
+
+header {
+    clear:both;
+    display:block;
+    width:100%;
+    height:30px;
+    margin:6px 6px 0 7px;
+    width:286px;
+}
+
+h1 {
+    font-size:12px;
+}
+
+.transport {
+    margin:0 0 0 7px;
+    display:block;
+    float:left;
+}
+
+.scrubber {
+    width:254px;
+    height:15px;
+    border:1px solid #003333;
+    display:block;
+    float:left;
+    margin:3px 0 5px 7px;
+    overflow:hidden;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    position:relative;
+}
+
+footer {
+    height:14px;
+    width:286px;
+    background:#666;
+    display:block;
+    position:absolute;
+    bottom:0;
+    padding:2px 7px 0 7px;
+}
+
+/* BEGIN scrub & loading */
+.scrub-target, .loading-target {
+    position:absolute;
+    top:0px;
+    left:0;
+    width:0px;
+    height:18px;
+    display:block;
+    margin:0 5px 0 0;
+}
+
+.scrub-target {
+    background:#00AAFF;
+    -webkit-box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;
+    -moz-box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;
+    box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;
+    color:#00AAFF;
+}
+
+.loading-target{
+    background:#666;
+}
+
+.scrub_container span{
+    white-space:nowrap;
+}
+/* END scrub & loading */
+
+/* BEGIN buttons */
+.next_button, .prev_button {
+    float:left;
+    margin: 0 3px 0 3px;
+}
+
+.play-button {
+    height: 18px;
+    width: 24px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    overflow:hidden;
+    display:block;
+    float:left;
+    margin:0 5px 0 0;
+    line-height:18px;
+    text-align:center;
+    color:#003333;
+    border:1px solid #003333;
+    font-weight:bold;
+    /*background:#666;*/
+    /*color:#00AAFF;*/
+    /*-webkit-box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;*/
+    /*-moz-box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;*/
+    /*box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;*/
+}
+
+.play-button:hover {
+    border:1px solid #00AAFF;
+    -webkit-box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;
+    -moz-box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;
+    box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;
+    color:#00AAFF;
+    /*color:#00AAFF;*/
+}
+.prev_button span, .next_button span {
+    display:none;
+}
+.next_button {
+    height: 13px;
+    width: 13px;
+    /*border:1px solid #e3e3e3;*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    overflow:hidden;
+    display:block;
+    float:left;
+    margin:0 5px 0 0;
+    line-height:13px;
+    text-align:center;
+    font-size:5px;
+
+    color:#003333;
+    border:1px solid #003333;
+    font-weight:bold;
+    /*-webkit-box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;*/
+    /*-moz-box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;*/
+    /*box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;*/
+}
+
+.prev_button {
+    height: 13px;
+    width: 13px;
+    /*border:1px solid #e3e3e3;*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    overflow:hidden;
+    display:block;
+    float:left;
+    margin:0 5px 0 0;
+    line-height:13px;
+    text-align:center;
+    font-size:5px;
+    color:#003333;
+    border:1px solid #003333;
+    font-weight:bold;
+}
+
+.next_button:hover, .prev_button:hover {
+    border:1px solid #00AAFF;
+    -webkit-box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;
+    -moz-box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;
+    box-shadow: #002a3f 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px 0px 0px inset;
+    color:#00AAFF;
+}
+
+.play_button span {
+    display:none;
+}
+
+.link_button {
+    background-repeat: repeat-x;
+    border: 1px solid #e3e3e3;
+    color: #333;
+    font-size: 11px;
+    padding: 1px 5px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    line-height: 15px;
+    display: inline-block;
+    text-decoration:none;
+    margin-top:1px;
+}
+/* END buttons */
+
+/* BEGIN playlist */
+#playlist {
+    height:90px;
+    width:286px;
+    overflow:scroll;
+    overflow-x: hidden;
+    margin:10px 7px 10px 7px;
+    padding:0px;
+    clear:both;
+    display:block;
+    border:1px solid #003333;
+}
+
+.playlist-ctrl span {
+    float:right;
+}
+
+ul li.current {
+    background-color: white;
+    cursor: default;
+    /*-webkit-transform: rotate3d(1, 0, 0, -90deg) translate3d(0px, 0px, 25px);*/
+    /*-moz-transform: rotate3d(1, 0, 0, -90deg) translate3d(0px, 0px, 25px);*/
+    color: black;
+    /*text-shadow: black 0px 1px 1px;*/
+    -webkit-box-shadow: #222 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px -1px 0px inset;
+    -moz-box-shadow: #222 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px -1px 0px inset;
+    box-shadow: #222 0px 26px 20px -20px inset, #222 0px -20px 20px -20px inset, black 0px -1px 0px inset;
+}
+
+
+li {
+    width:260px;
+    list-style: none;
+    padding:5px;
+    color:#fff;
+    line-height:14px;
+    margin-bottom:1px;
+}
+
+.even {
+    background-color:#404040;
+}
+
+.odd {
+    background-color:#303030;
+}
+
+/* END playlist */
+
+/* BEGIN themes */
+body.dark .player {
+    background:#000;
+}
+
+body.lite .player {
+    background:#fff;
+}
+
+body.dark h1 {
+    color:#fff;
+}
+
+body.lite h1 {
+    color:#000;
+}
+
+body.lite .scrub_container{
+    background:#666;
+}
+
+body.lite {
+    background:#fff;
+}
+
+body.lite .scrub_container{
+    background:#f3f3f3;
+}
+/* END themes */

@@ -1,0 +1,3 @@
+Player is a simple audio player with playlist, transport, and HTML5 support.
+
+Audio engine is soundmanager2. Requires unserscore and jquery.
